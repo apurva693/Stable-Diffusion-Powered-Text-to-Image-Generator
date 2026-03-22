@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Home Page Container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #5c2d91, #342a68); /* Darker gradient */
+  color: #ffffff;
+}
+
+.content {
+  max-width: 900px;
+  background: rgba(40, 40, 70, 0.8); /* Darker translucent background */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Intro Section */
+.intro-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #cfcfcf; /* Softer grey for readability */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Why We're Different */
+.why-different {
+  margin-top: 2rem;
+}
+
+.why-different h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.why-different ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-different li {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #b0b0b0; /* Muted grey */
+}
+
+.why-different li::before {
+  content: "✓ ";
+  color: #ffcc00; /* Bright gold */
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #ffcc00, #ff9900); /* Same gradient for all buttons */
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 165, 0, 0.6);
+}
+
+/* Remove secondary styling */
+.btn-secondary {
+  background: linear-gradient(90deg, #ffcc00, #ff9900);
+  color: #000;
+  border: none;
+}
+
+
+.btn-secondary:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .intro-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-section p,
+  .why-different li {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .why-different h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

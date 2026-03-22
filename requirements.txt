@@ -1,0 +1,10 @@
+flask
+torch
+diffusers
+transformers
+googletrans==3.1.0a0
+pillow
+pymongo
+flask_bcrypt
+python-dotenv
+accelerate
